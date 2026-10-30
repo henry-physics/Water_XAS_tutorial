@@ -2,10 +2,6 @@ COHSEX XAS calculation tutorial for one excited oxygen from a cell containing 32
 
 For a single oxygen, this as a 7 step process to get the important file tm.dat (which is essentially spikes on an energy grid which can be broadened to produce a plot of absorption intensity vs energy).
 
-When you have performed this calculation for many excited oxygen then you can consider the need for core-hole-shift, alignment, averaging, and normalization, which will make it possible to compare to the experimental XAS spectra. 
-
-For now, we will just focus on a single calculation which produces tm.dat as well as other files which can be used to plot the excited electron quasi-particle wave-function. 
-
 1. PW SCF: ground state DFT calculation with a core hole on the absorbing oxygen (the OO atom) producing 128 occupied orbitals
 2. CP SCF: maximally localized Wannier functions
 3. PW NSCF: computes additional bands (empty conduction bands)
@@ -14,12 +10,16 @@ For now, we will just focus on a single calculation which produces tm.dat as wel
 6. Diagonalize: diagonalize the Hamiltonian to get quasiparticle energies and eigenvectors
 7. XAS: compute the O 1s -> conduction state dipole transition strengths.
 
- ####
+After performing this calculation for many different excited waters, it is necessary to consider the core-hole-shift, energy alignment, and averaging + normalization. Then the final result can be compared to experimental XAS. 
+Later we will add these steps. 
+
+####
 The modified Quantum ESPRESSO 4.2.1 used here was 
 developed by the groups of Roberto Car and Xifan Wu (L. Kong, J. Wang, F. Tang, et al.), 
 with parts adapted from PARSEC. It is not an official Quantum ESPRESSO release.
+####
 
- ####
+Relevant citations: 
 
    W. Chen, X. Wu, R. Car, "X-ray absorption signatures of the molecular
   environment in water and ice," Phys. Rev. Lett. 105, 017802 (2010).
